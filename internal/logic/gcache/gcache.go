@@ -3,7 +3,6 @@ package gcache
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"github.com/gogf/gf/util/gconv"
 	"github.com/gogf/gf/v2/os/gcache"
 	"github.com/syndtr/goleveldb/leveldb"
@@ -22,8 +21,6 @@ func SaveAsCacheAndLevelDb(ctx context.Context, msgSimId string, msg *proto_mess
 
 	simTime := gconv.String(msg.SimTime)
 	fKey := msgSimId + "@" + simTime
-
-	fmt.Println(gconv.String(msgSimId) + "gcache get " + gconv.String(simTime))
 
 	//这里是维护一个所有想定Id的缓存
 	//IdCache存在simId的key？
