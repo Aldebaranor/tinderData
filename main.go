@@ -11,6 +11,9 @@ import (
 	"tinderData/internal/cmd"
 )
 
+//切换iotdb-client-go版本
+//go get github.com/apache/iotdb-client-go@d859381
+
 func main() {
 	//建立数据库连接
 	var ctx context.Context
