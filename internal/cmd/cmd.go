@@ -32,6 +32,12 @@ var (
 
 			})
 
+			s.Group("/iotdb", func(group *ghttp.RouterGroup) {
+				group.Bind(
+					controller.IotDb,
+				)
+			})
+
 			s.Run()
 			return nil
 		},

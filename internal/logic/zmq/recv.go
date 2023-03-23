@@ -142,7 +142,7 @@ func RecvDetect(ctx context.Context) {
 // cache存入IotDb
 func CleanIotdb(ctx context.Context, id uint32) {
 	//存IotDb之前清空同名数据
-	//TODO:修复bug
+	//TODO:修复清除数据的bug
 	//iotDb.CleanCache(id)
 	SaveIotDb(ctx, id)
 }
